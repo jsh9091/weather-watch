@@ -114,3 +114,12 @@
   text-anchor: middle;
   fill: white;
 }
+
+#locationLabel {
+  text-length: 80;
+  text-anchor: end;
+  x: 50%;
+  y: 73%;
+  text-anchor: middle;
+  fill: white;
+}

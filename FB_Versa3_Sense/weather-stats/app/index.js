@@ -41,6 +41,7 @@ const clockLabel = document.getElementById("clockLabel");
 const amPmLabel = document.getElementById("amPmLabel");
 const tempLabel = document.getElementById("tempLabel");
 const conditionLabel = document.getElementById("conditionLabel");
+const locationLabel = document.getElementById("locationLabel");
 
 /**
  * Update the display of clock values.
@@ -165,6 +166,8 @@ newfile.initialize((data) => {
   if (appbit.permissions.granted("access_location")) {
 
     conditionLabel.text = `${data.condition}`;
+    const maxTextLength = 12; // TODO revise max length for final layout
+    locationLabel.text = truncate(data.location, maxTextLength);
 
     data = units.temperature === "C" ? data : toFahrenheit(data);
     let degreeSymbol = "\u00B0";
@@ -173,7 +176,9 @@ newfile.initialize((data) => {
     // set values in GUI
     tempLabel.text = `${data.temperature}` + degreeSymbol + lettertMarker;
   } else {
+    conditionLabel.text = "----";
     tempLabel.text = "----";
+    locationLabel.text = "----";
   }
 });
 
@@ -183,4 +188,19 @@ newfile.initialize((data) => {
 */
 function toFahrenheit(data) {
   return Math.round((data.temperature * 1.8) + 32)
+}
+
+/**
+ * Checks if the length of a string is longer than the given integer. 
+ * If the length is longer, then the string is truncated.
+ * @param {*} text 
+ * @param {*} length 
+ * @returns string
+ */
+function truncate(text, length) {
+  if (text.length > length) {
+    let ellipsis = '\u2026';
+    text = text.substring(0, length) + ellipsis;
+  }
+  return text;
 }
