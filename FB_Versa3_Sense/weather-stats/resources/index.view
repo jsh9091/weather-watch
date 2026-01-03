@@ -24,15 +24,16 @@
 <svg>
   <rect id="background" />
 
+  <text id="clockLabel" />
+  <text id="amPmLabel" />
+
+  <text id="locationLabel" />
+  <image id="tempIcon" href="thermometer.png" />
+  <text id="tempLabel" />
+  <text id="conditionLabel" />
+  
   <text id="stepCountLabel" />
   <image id="stepsIcon" href="steps.png" />
   <text id="batteryLabel" />
   <image id="batteryIcon" href="battery-full.png" />
-
-  <text id="clockLabel" />
-  <text id="amPmLabel" />
-
-  <text id="tempLabel" />
-  <text id="conditionLabel" />
-  <text id="locationLabel" />
 </svg>

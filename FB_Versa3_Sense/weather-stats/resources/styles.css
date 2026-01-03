@@ -32,15 +32,61 @@
 #background {
   width: 100%;
   height: 100%;
-  fill: black;
+  fill: green;
+}
+
+#clockLabel {
+  font-size: 85;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: middle;
+  x: 48%;
+  y: 25%;
+  fill: white;
+}
+
+#amPmLabel {
+  font-family: System-Bold;
+  text-length: 30;
+  text-anchor: end;
+  x: 100%-17;
+  y: 25%;
+  fill: white;
+}
+
+#locationLabel {
+  text-length: 80;
+  text-anchor: end;
+  x: 50%;
+  y: 40%;
+  text-anchor: middle;
+  fill: white;
+}
+
+#tempIcon {
+  x: "10";
+  y: "150";
+  width: "15";
+  height: "25";
+  fill: white;
+  opacity: 1; 
+}
+
+#tempLabel {
+  x: "35";
+  y: "173";
+  font-family: System-Bold;
+  text-length: 30;
+  text-anchor: start;
+  fill: white;
 }
 
 #conditionLabel {
   text-length: 80;
+  x: 95%;
+  y: 70%;
   text-anchor: end;
-  x: 50%;
-  y: 12%;
-  text-anchor: middle;
+  fill: white;
 }
 
 #stepCountLabel {
@@ -48,14 +94,14 @@
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
-  x: 18%;
-  y: 25%;
+  x: 19%;
+  y: 85%;
   fill: white;
 }
 
 #stepsIcon {
-  x: 5%;
-  y: 19%;
+  x: 6%;
+  y: 79%;
   width: "35";
   height: "25";
   fill: white;
@@ -66,60 +112,14 @@
   text-length: 80;
   text-anchor: end;
   x: 82%;
-  y: 25%;
+  y: 85%;
   fill: white;
 }
 
 #batteryIcon {
   x: 84%;
-  y: 19%;
+  y: 79%;
   width: "35";
   height: "20";
-  fill: white;
-}
-
-#clockLabel {
-  font-size: 85;
-  font-family: System-Bold;
-  text-length: 80;
-  text-anchor: middle;
-  x: 50%;
-  y: 50%;
-  fill: white;
-}
-
-#amPmLabel {
-  font-family: System-Bold;
-  text-length: 30;
-  text-anchor: end;
-  x: 100%-15;
-  y: 50%;
-  fill: white;
-}
-
-#tempLabel {
-  font-family: System-Bold;
-  text-length: 30;
-  text-anchor: start;
-  x: 5%;
-  y: 50%;
-  fill: white;
-}
-
-#conditionLabel {
-  text-length: 80;
-  text-anchor: end;
-  x: 50%;
-  y: 63%;
-  text-anchor: middle;
-  fill: white;
-}
-
-#locationLabel {
-  text-length: 80;
-  text-anchor: end;
-  x: 50%;
-  y: 73%;
-  text-anchor: middle;
   fill: white;
 }
