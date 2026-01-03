@@ -23,4 +23,5 @@
 
 <svg>
   <rect id="background" />
+  <text id="clockLabel" />
 </svg>
