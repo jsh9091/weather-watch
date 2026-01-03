@@ -23,5 +23,11 @@
 
 <svg>
   <rect id="background" />
+
+  <text id="stepCountLabel" />
+  <image id="stepsIcon" href="steps.png" />
+  <text id="batteryLabel" />
+  <image id="batteryIcon" href="battery-full.png" />
+
   <text id="clockLabel" />
 </svg>

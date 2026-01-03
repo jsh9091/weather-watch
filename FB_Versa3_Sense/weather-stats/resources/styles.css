@@ -35,6 +35,49 @@
   fill: black;
 }
 
+#conditionLabel {
+  text-length: 80;
+  text-anchor: end;
+  x: 50%;
+  y: 12%;
+  text-anchor: middle;
+}
+
+#stepCountLabel {
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  x: 18%;
+  y: 25%;
+  fill: white;
+}
+
+#stepsIcon {
+  x: 5%;
+  y: 19%;
+  width: "35";
+  height: "25";
+  fill: white;
+}
+
+#batteryLabel {
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: end;
+  x: 82%;
+  y: 25%;
+  fill: white;
+}
+
+#batteryIcon {
+  x: 84%;
+  y: 19%;
+  width: "35";
+  height: "20";
+  fill: white;
+}
+
 #clockLabel {
   font-size: 85;
   font-family: System-Bold;

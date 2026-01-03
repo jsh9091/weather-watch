@@ -25,10 +25,17 @@
 import document from "document";
 import clock from "clock";
 import { preferences } from "user-settings";
+import { me as appbit } from "appbit";
+import { today as activity } from "user-activity";
+import { battery } from "power";
 
 // Update the clock every minute
 clock.granularity = "minutes";
 
+// Get a handle on the <svg> elements
+const stepCountLabel = document.getElementById("stepCountLabel");
+const batteryLabel = document.getElementById("batteryLabel");
+const batteryIcon = document.getElementById("batteryIcon");
 const clockLabel = document.getElementById("clockLabel");
 
 /**
@@ -36,8 +43,32 @@ const clockLabel = document.getElementById("clockLabel");
  * @param {*} evt 
  */
 clock.ontick = (evt) => {
+  // handle case of user permission for step counts is not there
+  if (appbit.permissions.granted("access_activity")) {
+    stepCountLabel.text = getSteps().formatted;
+  } else {
+    stepCountLabel.text = "-----";
+  }
+
   updateTimeDisplay(evt);
+
+  updateBattery();
 };
+
+/**
+ * Gets and formats user step count for the day.
+ * @returns 
+ */
+function getSteps() {
+  let val = activity.adjusted.steps || 0;
+  return {
+    raw: val,
+    formatted:
+      val > 999
+        ? `${Math.floor(val / 1000)},${("00" + (val % 1000)).slice(-3)}`
+        : val,
+  };
+}
 
 /**
  * Updates display of time information. 
@@ -74,4 +105,47 @@ function zeroPad(i) {
     i = "0" + i;
   }
   return i;
+}
+
+/**
+ * Update the displayed battery level. 
+ * @param {*} charger 
+ * @param {*} evt 
+ */
+battery.onchange = (charger, evt) => {
+  updateBattery();
+};
+
+/**
+ * Updates the battery battery icon and label.
+ */
+function updateBattery() {
+  updateBatteryLabel();
+  updateBatteryIcon();
+}
+
+/**
+ * Updates the battery lable GUI for battery percentage. 
+ */
+function updateBatteryLabel() {
+  let percentSign = "&#x25";
+  batteryLabel.text = battery.chargeLevel + percentSign;
+}
+
+/**
+ * Updates what battery icon is displayed. 
+ */
+function updateBatteryIcon() {
+  const minFull = 70;
+  const minHalf = 30;
+  
+  if (battery.charging) {
+    batteryIcon.image = "battery-charging.png"
+  } else if (battery.chargeLevel > minFull) {
+    batteryIcon.image = "battery-full.png"
+  } else if (battery.chargeLevel < minFull && battery.chargeLevel > minHalf) {
+    batteryIcon.image = "battery-half.png"
+  } else if (battery.chargeLevel < minHalf) {
+    batteryIcon.image = "battery-low.png"
+  }
 }
