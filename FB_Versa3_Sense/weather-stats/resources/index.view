@@ -30,4 +30,7 @@
   <image id="batteryIcon" href="battery-full.png" />
 
   <text id="clockLabel" />
+
+  <text id="tempLabel" />
+  <text id="conditionLabel" />
 </svg>

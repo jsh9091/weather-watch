@@ -24,10 +24,11 @@
 
 import document from "document";
 import clock from "clock";
-import { preferences } from "user-settings";
+import { preferences, units } from "user-settings";
 import { me as appbit } from "appbit";
 import { today as activity } from "user-activity";
 import { battery } from "power";
+import * as newfile from "./newfile";
 
 // Update the clock every minute
 clock.granularity = "minutes";
@@ -37,6 +38,8 @@ const stepCountLabel = document.getElementById("stepCountLabel");
 const batteryLabel = document.getElementById("batteryLabel");
 const batteryIcon = document.getElementById("batteryIcon");
 const clockLabel = document.getElementById("clockLabel");
+const tempLabel = document.getElementById("tempLabel");
+const conditionLabel = document.getElementById("conditionLabel");
 
 /**
  * Update the display of clock values.
@@ -148,4 +151,32 @@ function updateBatteryIcon() {
   } else if (battery.chargeLevel < minHalf) {
     batteryIcon.image = "battery-low.png"
   }
+}
+
+/**
+ * Receive and process new tempature data.
+ */
+newfile.initialize((data) => {
+  // fresh weather file received
+  if (appbit.permissions.granted("access_location")) {
+
+    conditionLabel.text = `${data.condition}`;
+
+    data = units.temperature === "C" ? data : toFahrenheit(data);
+    let degreeSymbol = "\u00B0";
+    let lettertMarker = units.temperature === "C" ? `C` : `F`;
+    
+    // set values in GUI
+    tempLabel.text = `${data.temperature}` + degreeSymbol + lettertMarker;
+  } else {
+    tempLabel.text = "----";
+  }
+});
+
+/**
+* Convert temperature value to Fahrenheit
+* @param {object} data WeatherData
+*/
+function toFahrenheit(data) {
+  return Math.round((data.temperature * 1.8) + 32)
 }
