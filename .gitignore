@@ -90,4 +90,9 @@ lerna-debug.log
 .DS_Store
 Thumbs.db
 FB_Versa3_Sense/weather-stats/package-lock.json
+FB_Versa3_Sense/weather-stats/build
+FB_Versa3_Sense/weather-stats/node_modules
+
 FB_Versa4_Sense2/weather-stats/package-lock.json
+FB_Versa4_Sense2/weather-stats/build
+FB_Versa4_Sense2/weather-stats/node_modules
