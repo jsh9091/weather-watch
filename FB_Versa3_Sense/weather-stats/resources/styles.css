@@ -88,6 +88,15 @@
   fill: white;
 }
 
+#amPmLabel {
+  font-family: System-Bold;
+  text-length: 30;
+  text-anchor: end;
+  x: 100%-15;
+  y: 50%;
+  fill: white;
+}
+
 #tempLabel {
   font-family: System-Bold;
   text-length: 30;

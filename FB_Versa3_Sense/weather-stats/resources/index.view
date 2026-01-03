@@ -30,6 +30,7 @@
   <image id="batteryIcon" href="battery-full.png" />
 
   <text id="clockLabel" />
+  <text id="amPmLabel" />
 
   <text id="tempLabel" />
   <text id="conditionLabel" />
