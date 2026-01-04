@@ -38,6 +38,10 @@
   <text id="locationLabel" />
   <text id="tempLabel" />
 
+  <image id="moonIcon" />
+  <text id="moonPaseLabelTop" />
+  <text id="moonPaseLabelBottom" />
+
   <!--Icon by Iconpacks: https://iconpacks.net/?utm_source=link-attribution&utm_content=16526 -->
   <image id="conditionIcon" href="condition.png" />
   <text id="conditionLabel" />

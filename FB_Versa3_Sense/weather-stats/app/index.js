@@ -29,35 +29,43 @@ import { me as appbit } from "appbit";
 import { today as activity } from "user-activity";
 import { battery } from "power";
 import * as newfile from "./newfile";
+import * as moon from "./lunarcalculator";
 
 // Update the clock every minute
 clock.granularity = "minutes";
 
 // Get a handle on the <svg> elements
+const clockLabel = document.getElementById("clockLabel");
+const amPmLabel = document.getElementById("amPmLabel");
+const locationLabel = document.getElementById("locationLabel");
+const tempLabel = document.getElementById("tempLabel");
+const moonIcon = document.getElementById("moonIcon");
+const moonPaseLabelTop = document.getElementById("moonPaseLabelTop");
+const moonPaseLabelBottom = document.getElementById("moonPaseLabelBottom");
+const conditionLabel = document.getElementById("conditionLabel");
 const stepCountLabel = document.getElementById("stepCountLabel");
 const batteryLabel = document.getElementById("batteryLabel");
 const batteryIcon = document.getElementById("batteryIcon");
-const clockLabel = document.getElementById("clockLabel");
-const amPmLabel = document.getElementById("amPmLabel");
-const tempLabel = document.getElementById("tempLabel");
-const conditionLabel = document.getElementById("conditionLabel");
-const locationLabel = document.getElementById("locationLabel");
 
 /**
  * Update the display of clock values.
  * @param {*} evt 
  */
 clock.ontick = (evt) => {
-  // handle case of user permission for step counts is not there
-  if (appbit.permissions.granted("access_activity")) {
-    stepCountLabel.text = getSteps().formatted;
-  } else {
-    stepCountLabel.text = "-----";
-  }
+    updateTimeDisplay(evt);
 
-  updateTimeDisplay(evt);
+    let todayDate = evt.date;
+    updatePhaseIcon(todayDate);
+    updatePhaseLabel(todayDate);
 
-  updateBattery();
+    // handle case of user permission for step counts is not there
+    if (appbit.permissions.granted("access_activity")) {
+        stepCountLabel.text = getSteps().formatted;
+    } else {
+        stepCountLabel.text = "-----";
+    }
+
+    updateBattery();
 };
 
 /**
@@ -203,4 +211,53 @@ function truncate(text, length) {
     text = text.substring(0, length) + ellipsis;
   }
   return text;
+}
+
+/**
+ * Updates the moon phase icon image. 
+ * @param {*} date 
+ */
+function updatePhaseIcon(date) {
+    const phase = moon.getLunarPhase(date);
+
+    switch (phase) {
+        case moon.newMoon:
+            moonIcon.image = "moon/new-moon.png";
+        break;
+        case moon.waxingCrescent:
+            moonIcon.image = "moon/waxing-cresent.png";
+        break;
+        case moon.firstQuarter:
+            moonIcon.image = "moon/first-quarter.png";
+        break;
+        case moon.waxingGibbous:
+            moonIcon.image = "moon/waxing-gibbous.png";
+        break;
+        case moon.fullMoon:
+            moonIcon.image = "moon/full-moon.png";
+        break;
+        case moon.waningGibbous:
+            moonIcon.image = "moon/waning-gibbous.png";
+        break;
+        case moon.lastQuarter:
+            moonIcon.image = "moon/last-quarter.png";
+        break;
+        case moon.waningCrescent:
+            moonIcon.image = "moon/waning-cresent.png";
+        break;
+        default: 
+            // something went wrong
+            moonIcon.image = "";
+    }
+}
+/**
+ * Displays text of lunar phase. 
+ * @param {*} date 
+ */
+function updatePhaseLabel(date) {
+    const phase = moon.getLunarPhase(date);
+    const words = phase.split(' ');
+
+    moonPaseLabelTop.text = words[0];
+    moonPaseLabelBottom.text = words[1];
 }
