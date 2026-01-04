@@ -174,6 +174,7 @@ newfile.initialize((data) => {
   if (appbit.permissions.granted("access_location")) {
 
     conditionLabel.text = `${data.condition}`;
+    
     const maxTextLength = 12; // TODO revise max length for final layout
     locationLabel.text = truncate(data.location, maxTextLength);
 

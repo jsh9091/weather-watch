@@ -55,48 +55,53 @@
 }
 
 #locationLabel {
+  font-family: FBCondensed-Regular;
   text-length: 80;
   text-anchor: end;
   x: 50%;
-  y: 39%;
+  y: 41%;
   text-anchor: middle;
   fill: white;
+  font-size: 38;
 }
 
 #tempLabel {
   x: "50%";
-  y: "170";
-  font-family: System-Regular;
-  text-length: 30;
+  y: "187";
+  font-family: FBCondensed-Regular;
+  text-length: 6;
   text-anchor: middle;
   fill: white;
+  font-size: 38;
 }
 
 #moonIcon {
-  x: "10%";
-  y: "40%";
+  x: "7%";
+  y: "41%";
   width: "27";
   height: "27";
-  fill: #D4F1F4; 
+  fill: white; 
   opacity: 1;
 }
 
 #moonPaseLabelTop {
-  font-family: System-Regular;
+  font-family: FBCondensed-Regular;
   text-length: 10;
   text-anchor: start;
   x: "7%";
   y: "59%";
-  fill: #D4F1F4
+  fill: white;
+  font-size: 32;
 }
 
 #moonPaseLabelBottom {
-  font-family: System-Regular;
+  font-family: FBCondensed-Regular;
   text-length: 10;
   text-anchor: start;
   x: "7%";
   y: "69%";
-  fill: #D4F1F4
+  fill: white;
+  font-size: 32;
 }
 
 #conditionIcon {
@@ -107,11 +112,13 @@
 }
 
 #conditionLabel {
+  font-family: FBCondensed-Regular;
   text-length: 80;
   x: 93%;
   y: 69%;
   text-anchor: end;
   fill: white;
+  font-size: 38;
 }
 
 #stepCountLabel {

@@ -36,6 +36,8 @@
   <rect x="8" y="97" width="320" height="2" fill="blue" />
 
   <text id="locationLabel" />
+  <!-- Center line over tempature. 336 (screen width) / 2 = 168 -->
+  <rect x="168-50" y="148" width="100" height="1" fill="white" />
   <text id="tempLabel" />
 
   <image id="moonIcon" />
