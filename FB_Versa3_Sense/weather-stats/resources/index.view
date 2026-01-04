@@ -30,8 +30,11 @@
   <text id="locationLabel" />
   <image id="tempIcon" href="thermometer.png" />
   <text id="tempLabel" />
-  <text id="conditionLabel" />
   
+  <!--Icon by Iconpacks: https://iconpacks.net/?utm_source=link-attribution&utm_content=16526 -->
+  <image id="conditionIcon" href="condition.png" />
+  <text id="conditionLabel" />
+
   <text id="stepCountLabel" />
   <image id="stepsIcon" href="steps.png" />
   <text id="batteryLabel" />

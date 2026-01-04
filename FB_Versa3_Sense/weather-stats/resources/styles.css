@@ -81,6 +81,13 @@
   fill: white;
 }
 
+#conditionIcon {
+  x: "73%";
+  y: "42%";
+  width: "64";
+  height: "64";
+}
+
 #conditionLabel {
   text-length: 80;
   x: 95%;
