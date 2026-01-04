@@ -155,3 +155,12 @@
   height: "20";
   fill: white;
 }
+
+#dateLabel {
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: middle;
+  x: 50%;
+  y: "322";
+  fill: white;
+}

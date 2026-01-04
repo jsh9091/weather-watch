@@ -54,4 +54,6 @@
   <image id="stepsIcon" href="steps.png" />
   <text id="batteryLabel" />
   <image id="batteryIcon" href="battery-full.png" />
+
+  <text id="dateLabel">Sun Jan 4</text>
 </svg>
