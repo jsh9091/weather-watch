@@ -27,13 +27,22 @@
   <text id="clockLabel" />
   <text id="amPmLabel" />
 
+  <gradientRect x="8" y="97" width="320" height="152"
+    gradient-type="linear"
+    gradient-x1="0" gradient-y1="0"
+    gradient-x2="0" gradient-y2="100%"
+    gradient-color1="dodgerblue" gradient-color2="darkslateblue" />
+
+  <rect x="8" y="97" width="320" height="2" fill="blue" />
+
   <text id="locationLabel" />
-  <image id="tempIcon" href="thermometer.png" />
   <text id="tempLabel" />
-  
+
   <!--Icon by Iconpacks: https://iconpacks.net/?utm_source=link-attribution&utm_content=16526 -->
   <image id="conditionIcon" href="condition.png" />
   <text id="conditionLabel" />
+
+  <rect x="8" y="249" width="320" height="2" fill="blue" />
 
   <text id="stepCountLabel" />
   <image id="stepsIcon" href="steps.png" />
