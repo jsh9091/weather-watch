@@ -46,6 +46,7 @@ const conditionLabel = document.getElementById("conditionLabel");
 const stepCountLabel = document.getElementById("stepCountLabel");
 const batteryLabel = document.getElementById("batteryLabel");
 const batteryIcon = document.getElementById("batteryIcon");
+const dateLabel = document.getElementById("dateLabel");
 
 /**
  * Update the display of clock values.
@@ -66,6 +67,8 @@ clock.ontick = (evt) => {
     }
 
     updateBattery();
+
+    updateDate(todayDate);
 };
 
 /**
@@ -261,4 +264,34 @@ function updatePhaseLabel(date) {
 
     moonPaseLabelTop.text = words[0];
     moonPaseLabelBottom.text = words[1];
+}
+
+/**
+ * Updates date information displayed. 
+ * @param {*} todayDate 
+ */
+function updateDate(todayDate) {
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  const month = monthNames[todayDate.getMonth()];
+  const dayOfMonth = todayDate.getDate();
+
+  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const index = todayDate.getDay();
+  const dayName = dayNames[index];
+
+  dateLabel.text = dayName + " " + month + " " + dayOfMonth;
 }
