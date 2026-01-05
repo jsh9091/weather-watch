@@ -37,7 +37,7 @@
 
 #clockLabel {
   font-size: 85;
-  font-family: System-Bold;
+  font-family: FBRational-Black;
   text-length: 80;
   text-anchor: middle;
   x: 48%;
@@ -46,7 +46,7 @@
 }
 
 #amPmLabel {
-  font-family: System-Bold;
+  font-family: FBRational-Bold;
   text-length: 30;
   text-anchor: end;
   x: 100%-17;
@@ -123,7 +123,7 @@
 
 #stepCountLabel {
   font-size: 30;
-  font-family: System-Bold;
+  font-family: FBRational-Bold;
   text-length: 80;
   text-anchor: start;
   x: 22%;
@@ -140,24 +140,24 @@
 }
 
 #batteryLabel {
-  font-family: System-Bold;
+  font-family: FBRational-Bold;
   text-length: 80;
   text-anchor: end;
-  x: 81%;
+  x: 80%;
   y: 85%;
   fill: white;
 }
 
 #batteryIcon {
   x: 83%;
-  y: 79%;
+  y: 78%;
   width: "35";
-  height: "20";
+  height: "24";
   fill: white;
 }
 
 #dateLabel {
-  font-family: System-Bold;
+  font-family: FBRational-Bold;
   text-length: 80;
   text-anchor: middle;
   x: 50%;
