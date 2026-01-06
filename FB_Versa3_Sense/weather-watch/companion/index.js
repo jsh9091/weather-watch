@@ -28,6 +28,38 @@ import { me as companion } from "companion";
 import { outbox } from "file-transfer";
 import { weather } from "weather";
 import { dataFile, wakeTime } from "../common/constants";
+import {
+  sunny,
+  mostlySunny,
+  partlySunny,
+  someClouds,
+  hazySun,
+  mostlyCloudy,
+  cloudy,
+  overcast,
+  fog,
+  showers,
+  thunderstorms,
+  rain,
+  flurries,
+  snow,
+  ice,
+  sleet,
+  freezingRain,
+  rainSnow,
+  hot,
+  cold,
+  windy,
+  clearNight,
+  mostlyClear,
+  cloudyNight,
+  clouds,
+  hazyMoon,
+  cloudyShowers,
+  cloudyStorms,
+  cloudyFlurries,
+  cloudySnow
+} from "../common/weatherConditions";
 
 /**
  * Update tempature data from phone.
@@ -72,106 +104,106 @@ function findWeatherConditionName(conditionCode) {
   let name;
   switch (conditionCode) {
     case 1:
-      name = "Sunny";
+      name = sunny;
       break;
     case 2:
-      name = "Mostly Sunny";
+      name = mostlySunny;
       break;
     case 3:
-      name = "Partly Sunny";
+      name = partlySunny;
       break;
     case 4:
-      name = "Some Clouds";
+      name = someClouds;
       break;
     case 5:
-      name = "Hazy Sun";
+      name = hazySun;
       break;
     case 6:
-      name = "Mostly Cloudy";
+      name = mostlyCloudy;
       break;
     case 7:
-      name = "Cloudy";
+      name = cloudy;
       break;
     case 8:
-      name = "Overcast";
+      name = overcast;
       break;
     case 11:
-      name = "Fog";
+      name = fog;
       break;
     case 12:
     case 13:
     case 14:
-      name = "Showers";
+      name = showers;
       break;
     case 15:
     case 16:
     case 17:
-      name = "Storms";
+      name = thunderstorms;
       break;
     case 18:
-      name = "Rain";
+      name = rain;
       break;
     case 19:
     case 20:
     case 21:
-      name = "Flurries";
+      name = flurries;
       break;
     case 22:
     case 23:
-      name = "Snow";
+      name = snow;
       break;
     case 24:
-      name = "Ice";
+      name = ice;
       break;
     case 25:
-      name = "Sleet";
+      name = sleet;
       break;
     case 26:
-      name = "Freezing Rain";
+      name = freezingRain;
       break;
     case 29:
-      name = "Rain + Snow";
+      name = rainSnow;
       break;
     case 30:
-      name = "Hot";
+      name = hot;
       break;
     case 31:
-      name = "Cold";
+      name = cold;
       break;
     case 32:
-      name = "Windy";
+      name = windy;
       break;
     case 33:
-      name = "Clear Night";
+      name = clearNight;
       break;
     case 34:
-      name = "Mostly Clear";
+      name = mostlyClear;
       break;
     case 35:
-      name = "Cloudy Night";
+      name = cloudyNight;
       break;
     case 36:
-      name = "Clouds";
+      name = clouds;
       break;
     case 37:
-      name = "Hazy Moon";
+      name = hazyMoon;
       break;
     case 38:
-      name = "Mostly Cloudy";
+      name = mostlyCloudy;
       break;
     case 39:
     case 40:
-      name = "Showers";
+      name = cloudyShowers;
       break;
     case 41:
     case 42:
-      name = "Storms";
+      name = cloudyStorms;
       break;
     case 43:
-      name = "Flurries";
+      name = cloudyFlurries;
       break;
     case 44:
-      name = "Snow";
+      name = cloudySnow;
       break;
     default:
       name = "";
