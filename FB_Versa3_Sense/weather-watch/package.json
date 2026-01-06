@@ -1,5 +1,5 @@
 {
-  "name": "weather-stats",
+  "name": "weather-watch",
   "version": "0.1.0",
   "private": true,
   "license": "UNLICENSED",
@@ -10,7 +10,7 @@
   "fitbit": {
     "appUUID": "148eccb6-f062-4f8d-86a4-14e6cac0ab6a",
     "appType": "clockface",
-    "appDisplayName": "Weather Stats",
+    "appDisplayName": "Weather Watch",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
         "requestedPermissions": [
