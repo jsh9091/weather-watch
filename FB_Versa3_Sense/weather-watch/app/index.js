@@ -30,6 +30,38 @@ import { today as activity } from "user-activity";
 import { battery } from "power";
 import * as newfile from "./newfile";
 import * as moon from "./lunarcalculator";
+import {
+  sunny,
+  mostlySunny,
+  partlySunny,
+  someClouds,
+  hazySun,
+  mostlyCloudy,
+  cloudy,
+  overcast,
+  fog,
+  showers,
+  thunderstorms,
+  rain,
+  flurries,
+  snow,
+  ice,
+  sleet,
+  freezingRain,
+  rainSnow,
+  hot,
+  cold,
+  windy,
+  clearNight,
+  mostlyClear,
+  cloudyNight,
+  clouds,
+  hazyMoon,
+  cloudyShowers,
+  cloudyStorms,
+  cloudyFlurries,
+  cloudySnow
+} from "../common/weatherConditions";
 
 // Update the clock every minute
 clock.granularity = "minutes";
@@ -42,6 +74,7 @@ const tempLabel = document.getElementById("tempLabel");
 const moonIcon = document.getElementById("moonIcon");
 const moonPaseLabelTop = document.getElementById("moonPaseLabelTop");
 const moonPaseLabelBottom = document.getElementById("moonPaseLabelBottom");
+const conditionIcon = document.getElementById("conditionIcon");
 const conditionLabel = document.getElementById("conditionLabel");
 const stepCountLabel = document.getElementById("stepCountLabel");
 const batteryLabel = document.getElementById("batteryLabel");
@@ -187,12 +220,120 @@ newfile.initialize((data) => {
     
     // set values in GUI
     tempLabel.text = `${data.temperature}` + degreeSymbol + lettertMarker;
+
+    updateWeatherConditionIcon(data.condition);
+
   } else {
     conditionLabel.text = "----";
     tempLabel.text = "----";
     locationLabel.text = "----";
+    conditionIcon.image = "";
   }
 });
+
+/**
+ * Updates the displayed weather icon.
+ * @param {*} condition 
+ */
+function updateWeatherConditionIcon(condition) {
+  switch (condition) {
+    case sunny:
+      conditionIcon.image = "weather-icons/yellow-sun-16526.png";
+      break;
+    case mostlySunny:
+      conditionIcon.image = "weather-icons/yellow-sun-and-blue-cloud-16528.png";
+      break;
+    case partlySunny:
+      conditionIcon.image = "weather-icons/yellow-sun-and-blue-cloud-16528.png";
+      break;
+    case someClouds:
+      conditionIcon.image = "weather-icons/yellow-sun-and-blue-cloud-16528.png";
+      break;
+    case hazySun:
+      conditionIcon.image = "weather-icons/blue-clouds-and-yellow-sun-16529.png";
+      break;
+    case mostlyCloudy:
+      conditionIcon.image = "weather-icons/blue-clouds-and-yellow-sun-16529.png";
+      break;
+    case cloudy:
+      conditionIcon.image = "weather-icons/blue-cloud-and-weather-16527.png";
+      break;
+    case overcast:
+      conditionIcon.image = "weather-icons/blue-cloud-and-weather-16527.png";
+      break;
+    case fog:
+      conditionIcon.image = "weather-icons/foggy-cloud-forecast-24549.png";
+      break;
+    case showers:
+      conditionIcon.image = "weather-icons/downpour-rainy-day-16531.png";
+      break;
+    case thunderstorms:
+      conditionIcon.image = "weather-icons/cloud-and-yellow-lightning-16534.png";
+      break;
+    case rain:
+      conditionIcon.image = "weather-icons/rainy-and-cloudy-day-16532.png";
+      break;
+    case flurries:
+      conditionIcon.image = "weather-icons/snowfall-and-blue-cloud-16541.png";
+      break;
+    case snow:
+      conditionIcon.image = "weather-icons/snow-and-blue-cloud-16540.png";
+      break;
+    case ice:
+      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud-16559.png";
+      break;
+    case sleet:
+      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud-16559.png";
+      break;
+    case freezingRain:
+      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud-16559.png";
+      break;
+    case rainSnow:
+      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud-16559.png";
+      break;
+    case hot:
+      conditionIcon.image = "weather-icons/blue-thermometer-and-heat-16549.png";
+      break;
+    case cold:
+      conditionIcon.image = "weather-icons/blue-thermometer-and-cold-16548.png";
+      break;
+    case windy:
+      conditionIcon.image = "weather-icons/blue-wind-16544.png";
+      break;
+    case clearNight:
+      conditionIcon.image = "weather-icons/yellow-moon-16536.png";
+      break;
+    case mostlyClear:
+      conditionIcon.image = "weather-icons/moon-and-cloudy-night-16537.png";
+      break;
+    case cloudyNight:
+      conditionIcon.image = "weather-icons/moon-and-cloudy-night-16537.png";
+      break;
+    case clouds:
+      conditionIcon.image = "weather-icons/blue-cloud-and-weather-16527.png";
+      break;
+    case hazyMoon:
+      conditionIcon.image = "weather-icons/moon-and-cloudy-night-16537.png";
+      break;
+    case mostlyCloudy:
+      conditionIcon.image = "weather-icons/blue-cloud-and-weather-16527.png";
+      break;
+    case cloudyShowers:
+      conditionIcon.image = "weather-icons/downpour-rainy-day-16531.png";
+      break;
+    case cloudyStorms:
+      conditionIcon.image = "weather-icons/cloud-and-yellow-lightning-16534.png";
+      break;
+    case cloudyFlurries:
+      conditionIcon.image = "weather-icons/snowfall-and-blue-cloud-16541.png";
+      break;
+    case cloudySnow:
+      conditionIcon.image = "weather-icons/snowfall-and-blue-cloud-16541.png";
+      break;
+    default:
+      conditionIcon.image = "";
+  }
+}
 
 /**
 * Convert temperature value to Fahrenheit
