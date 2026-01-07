@@ -44,8 +44,8 @@
   <text id="moonPaseLabelTop" />
   <text id="moonPaseLabelBottom" />
 
-  <!--Icon by Iconpacks: https://iconpacks.net/?utm_source=link-attribution&utm_content=16526 -->
-  <image id="conditionIcon" href="condition.png" />
+  <!--Icon by Iconpacks: https://www.iconpacks.net/free-icon-pack/free-weather-forecast-icon-pack-201.html -->
+  <image id="conditionIcon" />
   <text id="conditionLabel" />
 
   <rect x="8" y="249" width="320" height="2" fill="blue" />
