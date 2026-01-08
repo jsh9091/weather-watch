@@ -211,8 +211,9 @@ newfile.initialize((data) => {
 
     conditionLabel.text = `${data.condition}`;
     
-    const maxTextLength = 12; // TODO revise max length for final layout
+    const maxTextLength = 15;
     locationLabel.text = truncate(data.location, maxTextLength);
+    locationLabel.text = "Mmmmmmmmmmmmmmm";
 
     data = units.temperature === "C" ? data : toFahrenheit(data);
     let degreeSymbol = "\u00B0";
@@ -250,10 +251,10 @@ function updateWeatherConditionIcon(condition) {
       conditionIcon.image = "weather-icons/yellow-sun-and-blue-cloud-16528.png";
       break;
     case hazySun:
-      conditionIcon.image = "weather-icons/blue-clouds-and-yellow-sun-16529.png";
+      conditionIcon.image = "weather-icons/blue-clouds-and-yellow-sun.png";
       break;
     case mostlyCloudy:
-      conditionIcon.image = "weather-icons/blue-clouds-and-yellow-sun-16529.png";
+      conditionIcon.image = "weather-icons/blue-clouds-and-yellow-sun.png";
       break;
     case cloudy:
       conditionIcon.image = "weather-icons/blue-cloud-and-weather-16527.png";
@@ -268,7 +269,7 @@ function updateWeatherConditionIcon(condition) {
       conditionIcon.image = "weather-icons/downpour-rainy-day-16531.png";
       break;
     case thunderstorms:
-      conditionIcon.image = "weather-icons/cloud-and-yellow-lightning-16534.png";
+      conditionIcon.image = "weather-icons/cloud-and-yellow-lightning.png";
       break;
     case rain:
       conditionIcon.image = "weather-icons/rainy-and-cloudy-day-16532.png";
@@ -280,16 +281,16 @@ function updateWeatherConditionIcon(condition) {
       conditionIcon.image = "weather-icons/snow-and-blue-cloud-16540.png";
       break;
     case ice:
-      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud-16559.png";
+      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud.png";
       break;
     case sleet:
-      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud-16559.png";
+      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud.png";
       break;
     case freezingRain:
-      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud-16559.png";
+      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud.png";
       break;
     case rainSnow:
-      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud-16559.png";
+      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud.png";
       break;
     case hot:
       conditionIcon.image = "weather-icons/blue-thermometer-and-heat-16549.png";
@@ -322,7 +323,7 @@ function updateWeatherConditionIcon(condition) {
       conditionIcon.image = "weather-icons/downpour-rainy-day-16531.png";
       break;
     case cloudyStorms:
-      conditionIcon.image = "weather-icons/cloud-and-yellow-lightning-16534.png";
+      conditionIcon.image = "weather-icons/cloud-and-yellow-lightning.png";
       break;
     case cloudyFlurries:
       conditionIcon.image = "weather-icons/snowfall-and-blue-cloud-16541.png";

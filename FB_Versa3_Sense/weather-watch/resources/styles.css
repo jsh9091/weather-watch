@@ -77,9 +77,9 @@
 
 #moonIcon {
   x: "7%";
-  y: "41%";
-  width: "27";
-  height: "27";
+  y: "44%";
+  width: "25";
+  height: "25";
   fill: white; 
   opacity: 1;
 }
@@ -89,7 +89,7 @@
   text-length: 10;
   text-anchor: start;
   x: "7%";
-  y: "59%";
+  y: "61%";
   fill: white;
   font-size: 32;
 }
@@ -99,23 +99,23 @@
   text-length: 10;
   text-anchor: start;
   x: "7%";
-  y: "69%";
+  y: "71%";
   fill: white;
   font-size: 32;
 }
 
 #conditionIcon {
   x: "73%";
-  y: "41%";
-  width: "64";
-  height: "64";
+  y: "43%";
+  width: "60";
+  height: "60";
 }
 
 #conditionLabel {
   font-family: FBCondensed-Regular;
   text-length: 80;
   x: 93%;
-  y: 69%;
+  y: 71%;
   text-anchor: end;
   fill: white;
   font-size: 38;
