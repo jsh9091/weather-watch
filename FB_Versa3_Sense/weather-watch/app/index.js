@@ -213,7 +213,6 @@ newfile.initialize((data) => {
     
     const maxTextLength = 15;
     locationLabel.text = truncate(data.location, maxTextLength);
-    locationLabel.text = "Mmmmmmmmmmmmmmm";
 
     data = units.temperature === "C" ? data : toFahrenheit(data);
     let degreeSymbol = "\u00B0";

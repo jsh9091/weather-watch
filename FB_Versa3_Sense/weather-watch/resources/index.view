@@ -27,7 +27,7 @@
   <text id="clockLabel" />
   <text id="amPmLabel" />
 
-  <gradientRect x="8" y="97" width="320" height="152"
+  <gradientRect x="8" y="97" width="320" height="155"
     gradient-type="linear"
     gradient-x1="0" gradient-y1="0"
     gradient-x2="0" gradient-y2="100%"
@@ -48,7 +48,7 @@
   <image id="conditionIcon" />
   <text id="conditionLabel" />
 
-  <rect x="8" y="249" width="320" height="2" fill="blue" />
+  <rect x="8" y="252" width="320" height="2" fill="blue" />
 
   <text id="stepCountLabel" />
   <image id="stepsIcon" href="steps.png" />

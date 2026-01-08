@@ -127,13 +127,13 @@
   text-length: 80;
   text-anchor: start;
   x: 22%;
-  y: 85%;
+  y: 86%;
   fill: white;
 }
 
 #stepsIcon {
   x: 9%;
-  y: 78%;
+  y: 79%;
   width: "35";
   height: "25";
   fill: white;
@@ -144,13 +144,13 @@
   text-length: 80;
   text-anchor: end;
   x: 80%;
-  y: 85%;
+  y: 86%;
   fill: white;
 }
 
 #batteryIcon {
   x: 83%;
-  y: 78%;
+  y: 79%;
   width: "35";
   height: "24";
   fill: white;
@@ -161,6 +161,6 @@
   text-length: 80;
   text-anchor: middle;
   x: 50%;
-  y: "322";
+  y: "323";
   fill: white;
 }
