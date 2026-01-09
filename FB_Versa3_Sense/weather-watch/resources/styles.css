@@ -22,13 +22,6 @@
  * SOFTWARE.
  */
 
- .defaultText {
-  font-size: 32;
-  font-family: System-Regular;
-  font-weight: regular;
-  text-length: 32;
-}
-
 #background {
   width: 100%;
   height: 100%;
@@ -140,6 +133,7 @@
 }
 
 #batteryLabel {
+  font-size: 30;
   font-family: FBRational-Bold;
   text-length: 80;
   text-anchor: end;
@@ -157,10 +151,11 @@
 }
 
 #dateLabel {
+  font-size: 28;
   font-family: FBRational-Bold;
   text-length: 80;
   text-anchor: middle;
   x: 50%;
-  y: "323";
+  y: "321";
   fill: white;
 }
