@@ -213,7 +213,7 @@ newfile.initialize((data) => {
     
     const maxTextLength = 15;
     locationLabel.text = truncate(data.location, maxTextLength);
-
+locationLabel.text = "Mmmmmmmmmmmmmm"; // TODO remove
     data = units.temperature === "C" ? data : toFahrenheit(data);
     let degreeSymbol = "\u00B0";
     let lettertMarker = units.temperature === "C" ? `C` : `F`;
@@ -236,47 +236,78 @@ newfile.initialize((data) => {
  * @param {*} condition 
  */
 function updateWeatherConditionIcon(condition) {
+  resetConditionIconStyle();
+
   switch (condition) {
     case sunny:
+      conditionIcon.x = 256;
+      conditionIcon.y = 148;
+      conditionIcon.width = 55;
+      conditionIcon.height = 55;
       conditionIcon.image = "weather-icons/yellow-sun-16526.png";
       break;
     case mostlySunny:
-      conditionIcon.image = "weather-icons/yellow-sun-and-blue-cloud-16528.png";
-      break;
     case partlySunny:
-      conditionIcon.image = "weather-icons/yellow-sun-and-blue-cloud-16528.png";
-      break;
     case someClouds:
       conditionIcon.image = "weather-icons/yellow-sun-and-blue-cloud-16528.png";
       break;
     case hazySun:
-      conditionIcon.image = "weather-icons/blue-clouds-and-yellow-sun.png";
-      break;
     case mostlyCloudy:
       conditionIcon.image = "weather-icons/blue-clouds-and-yellow-sun.png";
       break;
     case cloudy:
+      conditionIcon.x = 242;
+      conditionIcon.y = 140;
+      conditionIcon.width = 68;
+      conditionIcon.height = 68;
       conditionIcon.image = "weather-icons/blue-cloud-and-weather-16527.png";
-      break;
     case overcast:
+      conditionIcon.x = 242;
+      conditionIcon.y = 143;
+      conditionIcon.width = 68;
+      conditionIcon.height = 68;
       conditionIcon.image = "weather-icons/blue-cloud-and-weather-16527.png";
       break;
     case fog:
+      conditionIcon.x = 261;
+      conditionIcon.y = 149;
+      conditionIcon.width = 55;
+      conditionIcon.height = 55;
       conditionIcon.image = "weather-icons/foggy-cloud-forecast-24549.png";
       break;
     case showers:
+      conditionIcon.x = 254;
+      conditionIcon.y = 148;
+      conditionIcon.width = 55;
+      conditionIcon.height = 55;
       conditionIcon.image = "weather-icons/downpour-rainy-day-16531.png";
       break;
     case thunderstorms:
+      conditionIcon.x = 240;
+      conditionIcon.y = 146;
+      conditionIcon.width = 64;
+      conditionIcon.height = 64;
       conditionIcon.image = "weather-icons/cloud-and-yellow-lightning.png";
       break;
     case rain:
+      conditionIcon.x = 261;
+      conditionIcon.y = 149;
+      conditionIcon.width = 55;
+      conditionIcon.height = 55;
       conditionIcon.image = "weather-icons/rainy-and-cloudy-day-16532.png";
       break;
     case flurries:
+      conditionIcon.x = 245;
+      conditionIcon.y = 148;
+      conditionIcon.width = 58;
+      conditionIcon.height = 58;
       conditionIcon.image = "weather-icons/snowfall-and-blue-cloud-16541.png";
       break;
     case snow:
+      conditionIcon.x = 259;
+      conditionIcon.y = 149;
+      conditionIcon.width = 55;
+      conditionIcon.height = 55;
       conditionIcon.image = "weather-icons/snow-and-blue-cloud-16540.png";
       break;
     case ice:
@@ -333,6 +364,16 @@ function updateWeatherConditionIcon(condition) {
     default:
       conditionIcon.image = "";
   }
+}
+
+/**
+ * Resets default styles for weather condition icon.
+ */
+function resetConditionIconStyle() {
+  conditionIcon.x = 245;
+  conditionIcon.y = 144;
+  conditionIcon.width = 60;
+  conditionIcon.height = 60;
 }
 
 /**
