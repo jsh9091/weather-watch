@@ -55,6 +55,7 @@ import {
   cloudyNight,
   clouds,
   hazyMoon,
+  mostlyCloudyNight,
   cloudyShowers,
   cloudyStorms,
   cloudyFlurries,
@@ -189,7 +190,7 @@ function findWeatherConditionName(conditionCode) {
       name = hazyMoon;
       break;
     case 38:
-      name = mostlyCloudy;
+      name = mostlyCloudyNight;
       break;
     case 39:
     case 40:

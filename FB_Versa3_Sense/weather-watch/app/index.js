@@ -57,6 +57,7 @@ import {
   cloudyNight,
   clouds,
   hazyMoon,
+  mostlyCloudyNight,
   cloudyShowers,
   cloudyStorms,
   cloudyFlurries,
@@ -236,7 +237,7 @@ newfile.initialize((data) => {
  * @param {*} condition 
  */
 function updateWeatherConditionIcon(condition) {
-  resetConditionIconStyle();
+  resetConditionStyles();
 
   switch (condition) {
     case sunny:
@@ -311,27 +312,44 @@ function updateWeatherConditionIcon(condition) {
       conditionIcon.image = "weather-icons/snow-and-blue-cloud-16540.png";
       break;
     case ice:
-      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud.png";
+      conditionIcon.x = 264;
+      conditionIcon.y = 147;
+      // Ice cube icon: https://icons8.com/icon/cv69cLhUJ64O/ice
+      conditionIcon.image = "weather-icons/ice-cube.png";
       break;
     case sleet:
-      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud.png";
-      break;
     case freezingRain:
-      conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud.png";
-      break;
     case rainSnow:
+      conditionIcon.x = 262;
+      conditionIcon.y = 149;
+      conditionIcon.width = 53;
+      conditionIcon.height = 53;
       conditionIcon.image = "weather-icons/hail-weather-and-winter-cloud.png";
       break;
     case hot:
+      conditionIcon.x = 268;
+      conditionIcon.y = 150;
+      conditionIcon.width = 53;
+      conditionIcon.height = 53;
       conditionIcon.image = "weather-icons/blue-thermometer-and-heat-16549.png";
       break;
     case cold:
+      conditionIcon.x = 262;
+      conditionIcon.y = 150;
+      conditionIcon.width = 53;
+      conditionIcon.height = 53;
       conditionIcon.image = "weather-icons/blue-thermometer-and-cold-16548.png";
       break;
     case windy:
+      conditionIcon.x = 252;
+      conditionIcon.y = 146;
       conditionIcon.image = "weather-icons/blue-wind-16544.png";
       break;
     case clearNight:
+      conditionIcon.x = 260;
+      conditionIcon.y = 152;
+      conditionIcon.width = 45;
+      conditionIcon.height = 45;
       conditionIcon.image = "weather-icons/yellow-moon-16536.png";
       break;
     case mostlyClear:
@@ -341,24 +359,37 @@ function updateWeatherConditionIcon(condition) {
       conditionIcon.image = "weather-icons/moon-and-cloudy-night-16537.png";
       break;
     case clouds:
-      conditionIcon.image = "weather-icons/blue-cloud-and-weather-16527.png";
+      conditionIcon.x = 250;
+      conditionIcon.y = 146;
+      conditionIcon.image = "weather-icons/blue-clouds-and-blue-moon.png";
       break;
     case hazyMoon:
       conditionIcon.image = "weather-icons/moon-and-cloudy-night-16537.png";
       break;
-    case mostlyCloudy:
-      conditionIcon.image = "weather-icons/blue-cloud-and-weather-16527.png";
+    case mostlyCloudyNight:
+      conditionLabel.x = 316;
+      conditionLabel.y = 239;
+      conditionLabel.style.fontSize = 33;
+      conditionIcon.y = 149;
+      conditionIcon.image = "weather-icons/blue-clouds-and-blue-moon.png";
       break;
     case cloudyShowers:
+      conditionIcon.x = 250;
+      conditionIcon.y = 150;
+      conditionIcon.width = 55;
+      conditionIcon.height = 55;
       conditionIcon.image = "weather-icons/downpour-rainy-day-16531.png";
       break;
     case cloudyStorms:
+      conditionIcon.y = 150;
       conditionIcon.image = "weather-icons/cloud-and-yellow-lightning.png";
       break;
     case cloudyFlurries:
-      conditionIcon.image = "weather-icons/snowfall-and-blue-cloud-16541.png";
-      break;
     case cloudySnow:
+      conditionIcon.x = 245;
+      conditionIcon.y = 148;
+      conditionIcon.width = 58;
+      conditionIcon.height = 58;
       conditionIcon.image = "weather-icons/snowfall-and-blue-cloud-16541.png";
       break;
     default:
@@ -369,7 +400,10 @@ function updateWeatherConditionIcon(condition) {
 /**
  * Resets default styles for weather condition icon.
  */
-function resetConditionIconStyle() {
+function resetConditionStyles() {
+  conditionLabel.x = 312;
+  conditionLabel.y = 239;
+  conditionLabel.style.fontSize = 38;
   conditionIcon.x = 245;
   conditionIcon.y = 144;
   conditionIcon.width = 60;

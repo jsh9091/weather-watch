@@ -49,6 +49,7 @@ export const mostlyClear = "Mostly Clear";
 export const cloudyNight = "Cloudy Night";
 export const clouds = "Clouds";
 export const hazyMoon = "Hazy Moon";
+export const mostlyCloudyNight = "Mostly Cloudy Night";
 export const cloudyShowers = "Cloudy + Showers"; 
 export const cloudyStorms = "Cloudy + Storms";
 export const cloudyFlurries = "Cloudy + Flurries";
