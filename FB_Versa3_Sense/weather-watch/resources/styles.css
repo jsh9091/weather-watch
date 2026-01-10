@@ -60,12 +60,12 @@
 
 #tempLabel {
   x: "50%";
-  y: "187";
+  y: 192;
   font-family: FBCondensed-Regular;
   text-length: 6;
   text-anchor: middle;
   fill: white;
-  font-size: 38;
+  font-size: 42;
 }
 
 #moonIcon {
