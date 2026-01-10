@@ -61,6 +61,10 @@ import {
   cloudyFlurries,
   cloudySnow
 } from "../common/weatherConditions";
+import * as simpleSettings from "./simple/companion-settings";
+
+simpleSettings.setDefaultSettings();
+simpleSettings.initialize();
 
 /**
  * Update tempature data from phone.

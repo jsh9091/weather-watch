@@ -63,6 +63,9 @@ import {
   cloudyFlurries,
   cloudySnow
 } from "../common/weatherConditions";
+import * as simpleSettings from "./simple/device-settings";
+
+let color = "white";
 
 // Update the clock every minute
 clock.granularity = "minutes";
@@ -78,6 +81,7 @@ const moonPaseLabelBottom = document.getElementById("moonPaseLabelBottom");
 const conditionIcon = document.getElementById("conditionIcon");
 const conditionLabel = document.getElementById("conditionLabel");
 const stepCountLabel = document.getElementById("stepCountLabel");
+const stepsIcon = document.getElementById("stepsIcon");
 const batteryLabel = document.getElementById("batteryLabel");
 const batteryIcon = document.getElementById("batteryIcon");
 const dateLabel = document.getElementById("dateLabel");
@@ -510,4 +514,35 @@ function updateDate(todayDate) {
   const dayName = dayNames[index];
 
   dateLabel.text = dayName + " " + month + " " + dayOfMonth;
+}
+
+/**
+ * Get and process settings changes.
+ * @param {*} data 
+ * @returns 
+ */
+function settingsCallback(data) {
+  if (!data) {
+    return;
+  }
+
+  if (data.color) {
+    color = data.color;
+    setColor();
+  }
+
+}
+simpleSettings.initialize(settingsCallback);
+
+/**
+ * Sets display elements to current color.
+ */
+function setColor() {
+  clockLabel.style.fill = color;
+  amPmLabel.style.fill = color;
+  stepCountLabel.style.fill = color;
+  stepsIcon.style.fill = color;
+  batteryLabel.style.fill = color;
+  batteryIcon.style.fill = color;
+  dateLabel.style.fill = color;
 }

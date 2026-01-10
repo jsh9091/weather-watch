@@ -27,11 +27,21 @@ registerSettingsPage(({ settings }) => (
     <Section
       title={
         <Text bold align="center">
-          App Settings
+          Weather Watch Settings
         </Text>
       }
     >
-      <Text>Hello world!</Text>
+      <ColorSelect
+        settingsKey="color"
+        colors={[
+          { color: "white" },
+          { color: "royalblue" },
+          { color: "dodgerblue" },
+          { color: "lightskyblue" },
+          { color: "darkcyan" },
+          { color: "mediumpurple" },
+        ]}
+      />
     </Section>
   </Page>
 ));
