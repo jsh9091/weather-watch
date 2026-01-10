@@ -1,5 +1,9 @@
 # Weather Watch
-Weather focused Fitbit watch-face. 
+A weather themed Fitbit watch-face. The display includes current location, local temperature, weather condition, and lunar phase. Additionally daily steps, battery percentage, and date are displayed at bottom of screen. 
+
+Color of top and bottom of screen items can are controlled with watch settings in the Fitbit phone app. 
+
+The following permissions are required: access location, run background, access activity.
 
 ![screenshot of watch-face](Screenshot.png)
 
