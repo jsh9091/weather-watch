@@ -1,0 +1,59 @@
+<!--
+  MIT License
+
+  Copyright (c) 2026 Joshua Horvath
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+ 
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE. -->
+
+<svg>
+  <rect id="background" />
+
+  <text id="clockLabel" />
+  <text id="amPmLabel" />
+
+  <gradientRect x="8" y="97" width="320" height="155"
+    gradient-type="linear"
+    gradient-x1="0" gradient-y1="0"
+    gradient-x2="0" gradient-y2="100%"
+    gradient-color1="dodgerblue" gradient-color2="darkslateblue" />
+
+  <rect x="8" y="97" width="320" height="2" fill="blue" />
+
+  <text id="locationLabel" />
+  <!-- Center line over tempature. 336 (screen width) / 2 = 168 -->
+  <rect x="168-50" y="148" width="100" height="1" fill="white" />
+  <text id="tempLabel" />
+
+  <image id="moonIcon" />
+  <text id="moonPaseLabelTop" />
+  <text id="moonPaseLabelBottom" />
+
+  <!--Icon by Iconpacks: https://www.iconpacks.net/free-icon-pack/free-weather-forecast-icon-pack-201.html -->
+  <image id="conditionIcon" />
+  <text id="conditionLabel" />
+
+  <rect x="8" y="252" width="320" height="2" fill="blue" />
+
+  <text id="stepCountLabel" />
+  <image id="stepsIcon" href="steps.png" />
+  <text id="batteryLabel" />
+  <image id="batteryIcon" href="battery-full.png" />
+
+  <text id="dateLabel" />
+</svg>
