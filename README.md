@@ -5,6 +5,10 @@ Color of top and bottom of screen items can are controlled with watch settings i
 
 The following permissions are required: access location, run background, access activity.
 
+Note: This clockface is not yet published to the Fitbit app store.
+
+[Fitbit App Gallery listing](https://gallery.fitbit.com/details/148eccb6-f062-4f8d-86a4-14e6cac0ab6a?key=e06f855f-a29b-4b04-84cb-2dfe798a66a3) 
+
 ![screenshot of watch-face](Screenshot.png)
 
 General Troubleshooting: 
