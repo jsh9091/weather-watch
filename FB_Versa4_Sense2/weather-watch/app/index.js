@@ -237,6 +237,18 @@ newfile.initialize((data) => {
 });
 
 /**
+* Convert temperature value to Fahrenheit
+* @param {object} data WeatherData
+*/
+function toFahrenheit(data) {
+  if (data.unit.toLowerCase() === "celsius") {
+     data.temperature =  Math.round((data.temperature * 1.8) + 32);
+     data.unit = "Fahrenheit";
+  }
+  return data
+}
+
+/**
  * Updates the displayed weather icon.
  * @param {*} condition 
  */
@@ -412,14 +424,6 @@ function resetConditionStyles() {
   conditionIcon.y = 144;
   conditionIcon.width = 60;
   conditionIcon.height = 60;
-}
-
-/**
-* Convert temperature value to Fahrenheit
-* @param {object} data WeatherData
-*/
-function toFahrenheit(data) {
-  return Math.round((data.temperature * 1.8) + 32)
 }
 
 /**
