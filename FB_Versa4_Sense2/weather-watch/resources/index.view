@@ -24,8 +24,9 @@
 <svg>
   <rect id="background" />
 
+  <text id="amLabel" />
   <text id="clockLabel" />
-  <text id="amPmLabel" />
+  <text id="pmLabel" />
 
   <gradientRect x="8" y="97" width="320" height="155"
     gradient-type="linear"

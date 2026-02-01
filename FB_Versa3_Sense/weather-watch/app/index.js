@@ -71,8 +71,9 @@ let color = "white";
 clock.granularity = "minutes";
 
 // Get a handle on the <svg> elements
+const amLabel = document.getElementById("amLabel");
 const clockLabel = document.getElementById("clockLabel");
-const amPmLabel = document.getElementById("amPmLabel");
+const pmLabel = document.getElementById("pmLabel");
 const locationLabel = document.getElementById("locationLabel");
 const tempLabel = document.getElementById("tempLabel");
 const moonIcon = document.getElementById("moonIcon");
@@ -149,7 +150,13 @@ function updateTimeDisplay(evt) {
   clockLabel.text = `${hours}:${displayMins}`;
 
   // AM / PM indicator
-  amPmLabel.text = rawhours >= 12 ? "PM" : "AM";
+  if (rawhours >= 12) {
+      pmLabel.text = "PM";
+      amLabel.text = "";
+  } else {
+      amLabel.text = "AM";
+      pmLabel.text = "";
+  }
 }
 
 /**

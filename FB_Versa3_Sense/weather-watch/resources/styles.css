@@ -33,16 +33,25 @@
   font-family: FBRational-Black;
   text-length: 80;
   text-anchor: middle;
-  x: 48%;
+  x: 50%;
   y: 25%;
   fill: white;
 }
 
-#amPmLabel {
+#amLabel {
+  font-family: FBRational-Bold;
+  text-length: 30;
+  text-anchor: start;
+  x: 16;
+  y: 25%;
+  fill: white;
+}
+
+#pmLabel {
   font-family: FBRational-Bold;
   text-length: 30;
   text-anchor: end;
-  x: 100%-17;
+  x: 100%-16;
   y: 25%;
   fill: white;
 }
