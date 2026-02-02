@@ -550,7 +550,8 @@ simpleSettings.initialize(settingsCallback);
  */
 function setColor() {
   clockLabel.style.fill = color;
-  amPmLabel.style.fill = color;
+  amLabel.style.fill = color;
+  pmLabel.style.fill = color;
   stepCountLabel.style.fill = color;
   stepsIcon.style.fill = color;
   batteryLabel.style.fill = color;
