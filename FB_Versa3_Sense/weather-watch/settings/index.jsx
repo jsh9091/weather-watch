@@ -42,6 +42,10 @@ registerSettingsPage(({ settings }) => (
           { color: "mediumpurple" },
         ]}
       />
+      <Toggle
+          settingsKey="ampm"
+          label="Show AM/PM"
+      />
     </Section>
   </Page>
 ));

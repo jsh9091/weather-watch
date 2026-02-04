@@ -66,6 +66,7 @@ import {
 import * as simpleSettings from "./simple/device-settings";
 
 let color = "white";
+let showAmPm = true;
 
 // Update the clock every minute
 clock.granularity = "minutes";
@@ -149,14 +150,20 @@ function updateTimeDisplay(evt) {
   // display time on main clock
   clockLabel.text = `${hours}:${displayMins}`;
 
-  // AM / PM indicator
-  if (rawhours >= 12) {
+  if (showAmPm) {
+    if (rawhours >= 12) {
       pmLabel.text = "PM";
       amLabel.text = "";
-  } else {
+    } else {
       amLabel.text = "AM";
       pmLabel.text = "";
+    }
+  } else {
+      amLabel.text = "";
+      pmLabel.text = "";
   }
+  // reset, if needed
+  clock.granularity = "minutes";
 }
 
 /**
@@ -542,6 +549,11 @@ function settingsCallback(data) {
     setColor();
   }
 
+  if (data.ampm !== undefined && data.ampm !== null) {
+    showAmPm = data.ampm;
+    // enforce update on display quickly
+    clock.granularity = "seconds";
+  }
 }
 simpleSettings.initialize(settingsCallback);
 
