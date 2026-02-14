@@ -5,7 +5,7 @@ Color of top and bottom of screen items can are controlled with watch settings i
 
 The following permissions are required: access location, run background, access activity.
 
-Note: This clockface is not yet published to the Fitbit app store.
+Note: This clockface is pending review to be published to the Fitbit app store. 
 
 [Fitbit App Gallery listing](https://gallery.fitbit.com/details/148eccb6-f062-4f8d-86a4-14e6cac0ab6a?key=e06f855f-a29b-4b04-84cb-2dfe798a66a3) 
 
@@ -14,7 +14,7 @@ Note: This clockface is not yet published to the Fitbit app store.
 General Troubleshooting: 
 - If the settings values in the Fitbit phone app become out of sync with the actual display of the watchface, try toggeling the out of sync values on the phone a couple times to resolve the issue.
 
-Troubleshooting: If the temperature does not show up: 
+Troubleshooting: If the temperature and weather information does not show up: 
 - Ensure that watch-face permissions are enabled. 
 - Ensure that Fitbit app permissions on phone, including location services and background refresh, are enabled. 
 - Try toggling on and off location services and background refresh permissions for Fitbit app on your phone. 
